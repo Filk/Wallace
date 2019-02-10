@@ -289,6 +289,7 @@
 			}
 , 			{
 				"box" : 				{
+					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 10.0,
 					"id" : "obj-18",
@@ -296,9 +297,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 957.0, 424.5, 43.0, 20.0 ],
+					"patching_rect" : [ 957.0, 424.5, 49.0, 20.0 ],
 					"style" : "",
-					"text" : "pipe 50"
+					"text" : "pipe 100"
 				}
 
 			}
@@ -768,7 +769,7 @@
 ,
 					"style" : "",
 					"text" : "autopattr",
-					"varname" : "u060004373"
+					"varname" : "u357002658"
 				}
 
 			}

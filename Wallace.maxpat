@@ -6178,7 +6178,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 520.493774, 576.0, 87.0, 56.0 ],
+					"patching_rect" : [ 520.493774, 576.0, 89.0, 56.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 191.9375, 243.5, 135.0625, 31.0 ],
 					"style" : "",
@@ -14856,13 +14856,13 @@
 					"restore" : 					{
 						"freqRev" : [ 0.1 ],
 						"gainReverb" : [ 0.0 ],
-						"gainSeco" : [ -50.0 ],
-						"gainTape" : [ -38.0 ]
+						"gainSeco" : [ -49.820038 ],
+						"gainTape" : [ -38.169891 ]
 					}
 ,
 					"style" : "",
 					"text" : "autopattr",
-					"varname" : "u246000647"
+					"varname" : "u731002151"
 				}
 
 			}
@@ -15749,7 +15749,7 @@
 					"destination" : [ "obj-199", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 421.0979, 615.811035, 620.993774, 615.811035 ],
+					"midpoints" : [ 415.002686, 615.811035, 620.993774, 615.811035 ],
 					"source" : [ "obj-376", 4 ]
 				}
 
@@ -15759,7 +15759,7 @@
 					"destination" : [ "obj-213", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 410.431244, 615.811035, 572.993774, 615.811035 ],
+					"midpoints" : [ 405.859802, 615.811035, 572.993774, 615.811035 ],
 					"source" : [ "obj-376", 3 ]
 				}
 
@@ -15769,7 +15769,7 @@
 					"destination" : [ "obj-214", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 399.764587, 615.811035, 522.993774, 615.811035 ],
+					"midpoints" : [ 396.716949, 615.811035, 522.993774, 615.811035 ],
 					"source" : [ "obj-376", 2 ]
 				}
 
@@ -15779,7 +15779,7 @@
 					"destination" : [ "obj-220", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 389.0979, 615.811035, 473.993744, 615.811035 ],
+					"midpoints" : [ 387.574097, 615.811035, 473.993744, 615.811035 ],
 					"source" : [ "obj-376", 1 ]
 				}
 
@@ -15808,7 +15808,7 @@
 					"destination" : [ "obj-228", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 431.764587, 615.811035, 378.431244, 615.811035 ],
+					"midpoints" : [ 424.145538, 615.811035, 378.431244, 615.811035 ],
 					"source" : [ "obj-376", 5 ]
 				}
 
@@ -15818,7 +15818,7 @@
 					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 442.431244, 613.811035, 679.993774, 613.811035 ],
+					"midpoints" : [ 433.288391, 613.811035, 679.993774, 613.811035 ],
 					"source" : [ "obj-376", 6 ]
 				}
 
@@ -16586,31 +16586,31 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "modulation1.maxpat",
-				"bootpath" : "~/MEOCloud/VariaçõesSobreEspaço/VariaçõesSobreEspaço#4/Wallace",
+				"bootpath" : "~/Desktop/Code/Wallace",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "fundo.png",
-				"bootpath" : "~/MEOCloud/VariaçõesSobreEspaço/VariaçõesSobreEspaço#4/Wallace",
+				"bootpath" : "~/Desktop/Code/Wallace",
 				"type" : "PNG ",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "espacos.json",
-				"bootpath" : "~/MEOCloud/VariaçõesSobreEspaço/VariaçõesSobreEspaço#4/Wallace",
+				"bootpath" : "~/Desktop/Code/Wallace",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "inputWallace1.maxpat",
-				"bootpath" : "~/MEOCloud/VariaçõesSobreEspaço/VariaçõesSobreEspaço#4/Wallace",
+				"bootpath" : "~/Desktop/Code/Wallace",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "outputs1.maxpat",
-				"bootpath" : "~/MEOCloud/VariaçõesSobreEspaço/VariaçõesSobreEspaço#4/Wallace",
+				"bootpath" : "~/Desktop/Code/Wallace",
 				"type" : "JSON",
 				"implicit" : 1
 			}
