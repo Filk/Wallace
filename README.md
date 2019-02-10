@@ -1,4 +1,4 @@
-Wallace
+<b>WALLACE </b><br/>
 
 Wallace is a digital software application developed to make a given audio signal to flow across different impulse responses (IRs). This version is made for the piece Variações Sobre Espaço #4, for flute, tape and live electronics. <br/> 
 [https://www.scherzoeditions.com/webshop/shop/variacoes-sobre-espaco-4-for-flute-and-wallace-filipe-lopes/?fbclid=IwAR0APpxb_fd5aAaDPBFWO9V_okdg9SWFrnEbuvxKNIhDKxiP1LILVaNMih8] <br/>
