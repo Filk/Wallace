@@ -1,0 +1,121 @@
+{
+	"pattrstorage" : 	{
+		"name" : "espacos",
+		"slots" : 		{
+			"1" : 			{
+				"id" : 1,
+				"data" : 				{
+					"freqRev" : [ 0.1 ],
+					"gainReverb" : [ 0.0 ],
+					"gainSeco" : [ -49.820038 ],
+					"gainTape" : [ -38.169891 ],
+					"modulation1::pictslider" : [ 83, 124 ],
+					"inputWallace1::1rev1" : [ 4 ],
+					"inputWallace1::1rev2" : [ 1 ],
+					"inputWallace1::1rev3" : [ 7 ],
+					"inputWallace1::1rev4" : [ 11 ]
+				}
+
+			}
+,
+			"2" : 			{
+				"id" : 2,
+				"data" : 				{
+					"freqRev" : [ 0.25 ],
+					"gainReverb" : [ 0.0 ],
+					"gainSeco" : [ -50.0 ],
+					"gainTape" : [ -38.0 ],
+					"modulation1::pictslider" : [ 4, 39 ],
+					"inputWallace1::1rev1" : [ 16 ],
+					"inputWallace1::1rev2" : [ 15 ],
+					"inputWallace1::1rev3" : [ 14 ],
+					"inputWallace1::1rev4" : [ 13 ]
+				}
+
+			}
+,
+			"3" : 			{
+				"id" : 3,
+				"data" : 				{
+					"freqRev" : [ 0.1 ],
+					"gainReverb" : [ 0.0 ],
+					"gainSeco" : [ -50.0 ],
+					"gainTape" : [ -38.0 ],
+					"modulation1::pictslider" : [ 19, 110 ],
+					"inputWallace1::1rev1" : [ 16 ],
+					"inputWallace1::1rev2" : [ 3 ],
+					"inputWallace1::1rev3" : [ 2 ],
+					"inputWallace1::1rev4" : [ 13 ]
+				}
+
+			}
+,
+			"4" : 			{
+				"id" : 4,
+				"data" : 				{
+					"freqRev" : [ 0.11 ],
+					"gainReverb" : [ 0.0 ],
+					"gainSeco" : [ -50.0 ],
+					"gainTape" : [ -38.0 ],
+					"modulation1::pictslider" : [ 0, 69 ],
+					"inputWallace1::1rev1" : [ 1 ],
+					"inputWallace1::1rev2" : [ 2 ],
+					"inputWallace1::1rev3" : [ 11 ],
+					"inputWallace1::1rev4" : [ 5 ]
+				}
+
+			}
+,
+			"5" : 			{
+				"id" : 5,
+				"data" : 				{
+					"freqRev" : [ 0.07 ],
+					"gainReverb" : [ 0.0 ],
+					"gainSeco" : [ -50.0 ],
+					"gainTape" : [ -38.0 ],
+					"modulation1::pictslider" : [ 18, 18 ],
+					"inputWallace1::1rev1" : [ 1 ],
+					"inputWallace1::1rev2" : [ 14 ],
+					"inputWallace1::1rev3" : [ 1 ],
+					"inputWallace1::1rev4" : [ 15 ]
+				}
+
+			}
+,
+			"6" : 			{
+				"id" : 6,
+				"data" : 				{
+					"freqRev" : [ 0.307 ],
+					"gainReverb" : [ 0.0 ],
+					"gainSeco" : [ -50.0 ],
+					"gainTape" : [ -38.0 ],
+					"modulation1::pictslider" : [ 12, 102 ],
+					"inputWallace1::1rev1" : [ 1 ],
+					"inputWallace1::1rev2" : [ 1 ],
+					"inputWallace1::1rev3" : [ 15 ],
+					"inputWallace1::1rev4" : [ 1 ]
+				}
+
+			}
+,
+			"7" : 			{
+				"id" : 7,
+				"data" : 				{
+					"freqRev" : [ 0.1 ],
+					"gainReverb" : [ 0.0 ],
+					"gainSeco" : [ -50.0 ],
+					"gainTape" : [ -38.0 ],
+					"modulation1::pictslider" : [ 0, 64 ],
+					"inputWallace1::1rev1" : [ 4 ],
+					"inputWallace1::1rev2" : [ 10 ],
+					"inputWallace1::1rev3" : [ 11 ],
+					"inputWallace1::1rev4" : [ 11 ]
+				}
+
+			}
+
+		}
+
+	}
+
+}
