@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wallace Lab — student guide</title>
+    <style>
+      :root {
+        --ink: #1a1612;
+        --muted: #5c5348;
+        --line: #d8cfc2;
+        --ember: #b04820;
+        --paper: #f7f1e6;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0 auto;
+        max-width: 42rem;
+        padding: 2.2rem 1.4rem 4rem;
+        background: var(--paper);
+        color: var(--ink);
+        font: 18px/1.5 "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
+      }
+      .eyebrow {
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        font: 0.7rem/1 ui-sans-serif, system-ui, sans-serif;
+        color: var(--ember);
+        margin: 0 0 0.4rem;
+      }
+      h1 { font-weight: 500; font-size: 2.2rem; margin: 0 0 0.8rem; }
+      h2 { font-weight: 500; font-size: 1.35rem; margin: 2.2rem 0 0.6rem; }
+      h3 { font-weight: 500; font-size: 1.1rem; margin: 1.4rem 0 0.4rem; }
+      p, li { color: var(--ink); }
+      a { color: var(--ember); }
+      table { width: 100%; border-collapse: collapse; margin: 0.8rem 0 1.1rem; font-size: 0.95rem; }
+      th, td { border-top: 1px solid var(--line); padding: 0.4rem 0.45rem; text-align: left; vertical-align: top; }
+      th { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+      hr { border: 0; border-top: 1px solid var(--line); margin: 1.6rem 0; }
+      .lede { font-size: 1.15rem; color: var(--muted); }
+      .back { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.85rem; }
+      @media print {
+        body { max-width: none; padding: 0; background: white; }
+        .back { display: none; }
+        a { color: inherit; text-decoration: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <p class="back"><a href="/">← Back to Wallace Lab</a> · Print this page to save a PDF</p>
+    <p class="eyebrow">variable reverberation</p>
+    <h1>Wallace Lab — student guide</h1>
+    <p class="lede">
+      A stereo instrument for composing with rooms that will not stay still.
+      This page explains every menu. Read it once, then keep it open while you work.
+    </p>
+
+    <h2>The idea in one minute</h2>
+    <p>
+      An <strong>impulse response</strong> (IR) is a recording of how a room answers a short sound — a clap, a starter pistol, a balloon. If you send a flute, a voice, or a file through that recording (<strong>convolution</strong>), the instrument sounds as if it were played in that room.
+    </p>
+    <p>Wallace puts <strong>four rooms</strong> on a square. A black point moves among them. There are two ways to travel:</p>
+    <ul>
+      <li><strong>Mix</strong> — several rooms at once, like four auxiliary sends on a mixing desk.</li>
+      <li><strong>Interpolate</strong> — one hybrid room that sits between the four. A single impossible space that changes as the point moves.</li>
+    </ul>
+    <p>That is the experiment: many rooms at once, or one room that changes species.</p>
+
+    <h2>How to start</h2>
+    <ol>
+      <li>In a terminal: <code>cd lab</code>, then <code>npm install</code>, then <code>npm run dev</code>.</li>
+      <li>Open the address it prints (usually <code>http://localhost:5173</code>).</li>
+      <li>Click <strong>Enable audio</strong>. The browser needs a click before it will make sound.</li>
+      <li>Click <strong>Fire</strong>. You should hear a click with a tail — the current room answering.</li>
+    </ol>
+    <p>If you hear nothing, raise <strong>Master</strong> and <strong>Wet</strong>, and make sure <strong>Mute</strong> is off.</p>
+
+    <h2>A first session (about ten minutes)</h2>
+    <ol>
+      <li>Leave the mode on <strong>Mix</strong>.</li>
+      <li>Source: <strong>Impulse</strong>. Click <strong>Fire</strong> while you drag the black point. Notice the tail near 1, 2, 3, 4, and in the middle.</li>
+      <li>Switch to <strong>Interpolate</strong>. Fire again on the same path. Ask: is this one room or several?</li>
+      <li>Click <strong>A/B</strong>. Stand still. Press <strong>Space</strong> to flip. Same point, two engines.</li>
+      <li>Source: <strong>None</strong> — silence. Then <strong>Mic</strong> or <strong>File</strong>, and play a short phrase.</li>
+      <li>Click <strong>Record</strong>, improvise, click <strong>Stop</strong>. A WAV downloads. Drop it into a DAW.</li>
+    </ol>
+
+    <h2>The square</h2>
+    <p>The square is the main instrument, the same idea as the original Wallace patch. The black point is “where you are.” Orange discs grow when that room is contributing more.</p>
+    <table>
+      <tr><th>Number</th><th>Place</th><th>Default room</th></tr>
+      <tr><td>1</td><td>Left</td><td>Tile room — short, bright</td></tr>
+      <tr><td>2</td><td>Top</td><td>Chamber — medium, neutral</td></tr>
+      <tr><td>3</td><td>Right</td><td>Hall — long, warm</td></tr>
+      <tr><td>4</td><td>Bottom</td><td>Nave — very long, dark</td></tr>
+    </table>
+    <p>Near a number, that room dominates. The centre is a blend of all four. Drag when Transition is <strong>Off</strong>.</p>
+
+    <h2>Modes (top right)</h2>
+    <h3>Mix</h3>
+    <p>Four convolutions run together. Their volumes follow the point. Rooms can <strong>coexist</strong>. You may hear a short bright tail and a long dark tail at the same time. The decay plot often shows more than one slope.</p>
+    <h3>Interpolate</h3>
+    <p>One hybrid impulse response is rebuilt from the same point. You hear <strong>one space changing</strong>. The decay plot is usually a single slope.</p>
+    <h3>A/B</h3>
+    <p>Same four rooms, same point. Press <strong>Space</strong> or <strong>Flip A/B</strong> to switch engines. Use this to decide which process belongs to a phrase. Dragging still moves the point.</p>
+
+    <h2>Transition and Rate</h2>
+    <table>
+      <tr><th>Transition</th><th>What the point does</th></tr>
+      <tr><td>Off (drag)</td><td>You move it. Composition stays in your hand.</td></tr>
+      <tr><td>Circular</td><td>The point walks a circle.</td></tr>
+      <tr><td>Rectilinear</td><td>The point travels left–right through the middle.</td></tr>
+      <tr><td>Random</td><td>The point chooses a spot, glides there, chooses again.</td></tr>
+    </table>
+    <p><strong>Rate</strong> is how fast that movement is. Slow rates (0.05–0.15) read as travel. Fast rates turn the rooms into a texture. Learn the four corners on Off, then let Circular or Random perform while you play.</p>
+
+    <h2>Source</h2>
+    <p>This is the sound that enters the rooms.</p>
+    <table>
+      <tr><th>Source</th><th>What it is</th><th>When to use it</th></tr>
+      <tr><td>None</td><td>Silence. Stops file, mic, noise, and pulse.</td><td>Rest, talk, change IRs, or wait for a tail to die. Fire does nothing.</td></tr>
+      <tr><td>Impulse</td><td>A click when you press Fire (or Space, if not in A/B).</td><td>Hearing the room itself — the cleanest test.</td></tr>
+      <tr><td>Noise</td><td>A continuous noise bed. Fire sends a short burst.</td><td>Hearing brightness and length.</td></tr>
+      <tr><td>Pulse</td><td>A continuous sawtooth tone.</td><td>Hearing pitch inside the tail.</td></tr>
+      <tr><td>File</td><td>A looping sound file.</td><td>A recorded phrase or tape part. Use Open file if needed.</td></tr>
+      <tr><td>Mic</td><td>The computer microphone, live.</td><td>Voice, instrument, improvisation. Allow permission when asked.</td></tr>
+    </table>
+    <p><strong>Dry</strong> is the source with no room. Keep it low if you want to hear the spaces. <strong>Wet</strong> is the reverberated sound — the main voice of the lab.</p>
+
+    <h2>Impulse responses (the four slots)</h2>
+    <p>Each slot is one corner of the square. Choose a built-in room (Tile, Chamber, Hall, Nave) or <strong>Load WAV</strong> to use your own IR. The built-in rooms are synthetic sketches, different enough to study travel. For a piece, load real halls.</p>
+    <p>A useful quartet: one short bright room, one medium, one long warm, one very long dark — the default set. Then replace them one by one.</p>
+
+    <h2>Interpolate menu</h2>
+    <p>These settings change only Interpolate (and B in A/B). Mix always uses a straight volume blend.</p>
+    <table>
+      <tr><th>Method</th><th>What it does</th><th>How it tends to sound</th></tr>
+      <tr><td>Early / late split</td><td>The first milliseconds are mixed in time. The tail is morphed in the spectrum.</td><td>Attacks stay readable; the space melts. Good default for voice and flute.</td></tr>
+      <tr><td>Log-magnitude</td><td>The whole IR is morphed by blending spectral energy.</td><td>A stronger hybrid. The “halfway” place can feel like new architecture.</td></tr>
+      <tr><td>Time mix (control)</td><td>Weighted sum of the IR waveforms — the same as Mix.</td><td>Use this to check the comparison. If both modes sound identical, you are probably here.</td></tr>
+    </table>
+    <p><strong>Early window</strong> (10–120 ms) is how much of the start counts as “early.” About <strong>40 ms</strong> is a good start.</p>
+    <p><strong>Listen to hybrid IR</strong> plays the current room by itself, with no flute or file in the way.</p>
+
+    <h2>Record, Mute, Master</h2>
+    <h3>Record</h3>
+    <p>Records the <strong>master</strong> (dry + wet, Mix or Interpolate), not the raw microphone alone. Press <strong>R</strong> or click Record (the button turns red), play, then Stop. A WAV file downloads: <code>wallace-lab-YYYYMMDD-HHMMSS.wav</code>. The take also stays as a link. Import it into a DAW like any other audio file. It is mono, 16-bit, at the browser’s sample rate (often 44.1 or 48 kHz).</p>
+    <h3>Mute</h3>
+    <p>Silences the <strong>speakers</strong> only. Recording continues. Use it against feedback, or to keep playing into a take without monitoring. Mute is not None: None stops the source; Mute only closes the monitors. Press <strong>M</strong>.</p>
+    <h3>Master</h3>
+    <p>The final level after Dry and Wet. It affects both what you hear and what is recorded. Default is 0.90. If the take is quiet in the DAW, raise Master before you record again.</p>
+
+    <h2>The three pictures (Resulting IR)</h2>
+    <p>These show the room, not your live playing.</p>
+    <ol>
+      <li><strong>Waveform</strong> — the IR in time. A short room is a compact spike. A nave is a long decaying cloud.</li>
+      <li><strong>Schroeder decay</strong> — how energy dies, in decibels. One slope ≈ one decay time. A broken or double slope often means two rooms still present (typical of Mix).</li>
+      <li><strong>Spectrogram</strong> — time across, frequency up. Bright rooms keep high frequencies in the tail. Dark rooms lose them quickly.</li>
+    </ol>
+    <p>The numbers above the pictures (weights and RT60) say how much each slot is contributing and give a rough reverberation time. They should change when you flip A/B.</p>
+
+    <h2>Keyboard</h2>
+    <table>
+      <tr><th>Key</th><th>Action</th></tr>
+      <tr><td>R</td><td>Start or stop recording</td></tr>
+      <tr><td>M</td><td>Mute or unmute the speakers</td></tr>
+      <tr><td>Space</td><td>In A/B: flip Mix / Interpolate. Otherwise: Fire (unless Source is None)</td></tr>
+    </table>
+    <p>Keys are ignored while you are typing in a box or using a menu.</p>
+
+    <h2>Listening advice</h2>
+    <ul>
+      <li><strong>Voice</strong> shows rooms more clearly than a smooth instrument. Speak, then play the same path on flute or saxophone.</li>
+      <li><strong>Short contrasting gestures</strong> (staccato, silence, a long tone) make the tail readable.</li>
+      <li>The <strong>real room you sit in</strong> is a fifth IR you cannot switch off. Headphones make virtual rooms easier to judge. Speakers put them back in dialogue with the hall — part of the piece, not a mistake.</li>
+      <li>A <strong>quiet background soundscape</strong> (a file, low dry/wet) can make the virtual rooms stand out.</li>
+    </ul>
+
+    <h2>Compositional questions</h2>
+    <ol>
+      <li>Do I want several spaces at once, or one space becoming another?</li>
+      <li>Should the point stay in my hands (Off), or should it perform (Circular, Random)?</li>
+      <li>What happens if one slot is a measured IR and the opposite slot is almost dry?</li>
+      <li>Does the phrase leave time for the tail to speak?</li>
+      <li>After A/B, which engine belongs to this material — and does that change in a real hall?</li>
+    </ol>
+    <p>When something works, Record it. The WAV is the sketch. The square settings are the score of the space.</p>
+
+    <h2>If something is wrong</h2>
+    <table>
+      <tr><th>Problem</th><th>Try this</th></tr>
+      <tr><td>No sound</td><td>Enable audio. Unmute. Raise Master and Wet. Source not on None.</td></tr>
+      <tr><td>Only a click, no room</td><td>Raise Wet. Drag away from a very short IR. Check that IRs are loaded.</td></tr>
+      <tr><td>Mic is silent</td><td>Allow microphone permission. Check the system input.</td></tr>
+      <tr><td>Mic howls</td><td>Mute the speakers, use headphones, or lower Master.</td></tr>
+      <tr><td>Mix and Interpolate sound the same</td><td>Use Early / late split or Log-magnitude, not Time mix. Stand between two different rooms.</td></tr>
+      <tr><td>Recording is empty</td><td>Do not leave Source on None for the whole take. Watch the timer.</td></tr>
+      <tr><td>File will not load</td><td>Use WAV, AIFF, or MP3. Very long IRs are trimmed to a few seconds.</td></tr>
+    </table>
+
+    <hr />
+    <p>
+      Wallace Lab is a studio for the question Wallace was built to ask: how do we compose when reverberation will not stay still? The menus are only there so you can ask that with your ears.
+    </p>
+    <p class="back"><a href="/">← Back to Wallace Lab</a></p>
+  </body>
+</html>

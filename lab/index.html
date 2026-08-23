@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wallace Lab</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="gate">
+      <div class="gate-card">
+        <p class="eyebrow">variable reverberation</p>
+        <h1>Wallace Lab</h1>
+        <p class="lede">
+          A stereo instrument for comparing two ways of travelling between
+          rooms: mixing four convolutions, or interpolating one hybrid impulse
+          response.
+        </p>
+        <button id="start-btn" type="button">Enable audio</button>
+      </div>
+    </div>
+
+    <header class="top">
+      <div>
+        <p class="eyebrow">Wallace Lab</p>
+        <h1>Mix or interpolate</h1>
+      </div>
+      <nav class="modes" aria-label="Engine mode">
+        <button type="button" data-mode="mix" class="active">Mix</button>
+        <button type="button" data-mode="interp">Interpolate</button>
+        <button type="button" data-mode="ab">A/B</button>
+      </nav>
+    </header>
+
+    <section class="transport" aria-label="Monitor and record">
+      <button type="button" id="record">Record</button>
+      <span id="rec-time">00:00</span>
+      <button type="button" id="mute">Mute</button>
+      <label class="master-label">Master
+        <span class="master-row">
+          <input id="master" type="range" min="0" max="1.2" step="0.01" value="0.9" />
+          <span id="master-val">0.90</span>
+        </span>
+      </label>
+      <p class="transport-note">
+        Mute silences the speakers only. The take still records. Press
+        <kbd>R</kbd> to record, <kbd>M</kbd> to mute.
+      </p>
+      <div id="takes" class="takes" hidden></div>
+    </section>
+
+    <main>
+      <section class="square-col">
+        <div class="square-wrap">
+          <canvas id="square" width="520" height="520"></canvas>
+          <span class="spk" data-spk="1">1</span>
+          <span class="spk" data-spk="2">2</span>
+          <span class="spk" data-spk="3">3</span>
+          <span class="spk" data-spk="4">4</span>
+        </div>
+        <div class="row">
+          <label>Transition
+            <select id="transition">
+              <option value="off">Off (drag)</option>
+              <option value="circular">Circular</option>
+              <option value="rectilinear">Rectilinear</option>
+              <option value="random">Random</option>
+            </select>
+          </label>
+          <label>Rate
+            <input id="rate" type="range" min="0.02" max="1.2" step="0.01" value="0.12" />
+          </label>
+        </div>
+        <p class="hint" id="ab-hint" hidden>
+          A/B is live. Drag still moves the point. Press <kbd>Space</kbd> or
+          <button type="button" id="flip-ab">Flip A/B</button>
+          to hear mix vs interpolate on the same IRs.
+        </p>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2 id="view-title">Resulting IR</h2>
+          <p id="view-meta">—</p>
+        </div>
+        <canvas id="wave" width="720" height="110"></canvas>
+        <canvas id="decay" width="720" height="140"></canvas>
+        <canvas id="spec" width="720" height="160"></canvas>
+        <p class="legend">
+          Waveform · Schroeder decay (the mix often shows two slopes; a morph
+          usually one) · Spectrogram
+        </p>
+      </section>
+    </main>
+
+    <section class="controls">
+      <div class="block">
+        <h3>Source</h3>
+        <div class="chips" id="source-chips">
+          <button type="button" data-source="none">None</button>
+          <button type="button" data-source="impulse" class="active">Impulse</button>
+          <button type="button" data-source="noise">Noise</button>
+          <button type="button" data-source="pulse">Pulse</button>
+          <button type="button" data-source="file">File</button>
+          <button type="button" data-source="mic">Mic</button>
+        </div>
+        <div class="row">
+          <button type="button" id="fire">Fire</button>
+          <input id="file" type="file" accept="audio/*" hidden />
+          <button type="button" id="open-file">Open file</button>
+        </div>
+        <label>Dry
+          <input id="dry" type="range" min="0" max="1" step="0.01" value="0.05" />
+        </label>
+        <label>Wet
+          <input id="wet" type="range" min="0" max="1.5" step="0.01" value="0.85" />
+        </label>
+      </div>
+
+      <div class="block span-2">
+        <h3>Impulse responses</h3>
+        <div class="irs" id="ir-slots"></div>
+      </div>
+
+      <div class="block">
+        <h3>Interpolate</h3>
+        <label>Method
+          <select id="method">
+            <option value="early-late">Early / late split</option>
+            <option value="log-mag">Log-magnitude</option>
+            <option value="time">Time mix (control)</option>
+          </select>
+        </label>
+        <label>Early window
+          <input id="early" type="range" min="10" max="120" step="1" value="40" />
+          <span id="early-val">40 ms</span>
+        </label>
+        <button type="button" id="preview-ir">Listen to hybrid IR</button>
+      </div>
+    </section>
+
+    <footer>
+      Stereo lab · four rooms · same square as Wallace · mixing desk vs spectral morph
+      · <a href="/guide.html">Student guide</a>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

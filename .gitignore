@@ -1,0 +1,5 @@
+.DS_Store
+/package-lock.json
+lab/node_modules
+lab/dist
+lab/.verify
